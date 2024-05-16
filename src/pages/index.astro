@@ -4,7 +4,27 @@ import MainLayout from "src/layouts/MainLayout.astro"
 
 <MainLayout title="christphralden">
 	<main>
-
+		<div class="w-screen h-screen flex p-8">
+			<div class="w-full h-full relative ">
+				<p class=" slide-up name bottom-0 left-0 absolute font-suisse text-9xl font-light text-black tracking-tighter font-su">Christopher Alden</p>
+				<span class="slide-up role right-0 top-80 absolute text-5xl text-right tracking-tight">Designer <span class="font-suisse-works italic">&</span> <br/>Fullstack Developer</span>
+			</div>
+		</div>
 	</main>
 </MainLayout>
 
+<script type="module">
+	import { gsap } from 'https://cdn.skypack.dev/gsap';
+
+	document.addEventListener('DOMContentLoaded', function() {
+		gsap.from(".slide-up", {
+			duration: 2,
+			y: 100,
+			opacity: 0, 
+			stagger: 0.2,
+			ease: "power3.out",
+		});
+	});
+
+	
+</script>

@@ -1,0 +1,8 @@
+---
+import { NavbarRoutes } from "@lib/routes/navbar-routes"
+---
+<nav class="fixed w-full h-20 p-8 flex justify-between ">
+    {NavbarRoutes.map(routes=>(
+        <p class="text-base  ">{routes.name}</p>
+    ))}
+</nav>

@@ -1,0 +1,22 @@
+---
+import '@styles/custom-cursor.css';
+---
+
+<div id="custom-cursor-container"></div>
+
+<script>
+    import MouseFollower from 'mouse-follower';
+    import gsap from 'gsap';
+
+    MouseFollower.registerGSAP(gsap);
+
+    const cursor = new MouseFollower({
+        container: document.body,
+        speed: 0.2,
+        className: 'custom-cursor',
+        ease: 'expo.out'
+    });
+    cursor.setSkewing(5);
+
+
+</script>
