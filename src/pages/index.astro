@@ -7,7 +7,12 @@ import MainLayout from "src/layouts/MainLayout.astro"
 		<div class="w-screen h-screen flex p-8">
 			<div class="w-full h-full relative ">
 				<p class=" slide-up name bottom-0 left-0 absolute font-suisse text-9xl font-light text-black tracking-tighter font-su">Christopher Alden</p>
-				<span class="slide-up role right-0 top-80 absolute text-5xl text-right tracking-tight">Designer <span class="font-suisse-works italic">&</span> <br/>Fullstack Developer</span>
+				<span class="slide-up role right-0 top-80 absolute text-5xl text-right tracking-tight">
+					Designer 
+					<span class="font-suisse-works italic">&</span>
+					<br/>
+					<span class="slide-up">Fullstack Developer</span>
+				</span>
 			</div>
 		</div>
 	</main>
@@ -18,11 +23,11 @@ import MainLayout from "src/layouts/MainLayout.astro"
 
 	document.addEventListener('DOMContentLoaded', function() {
 		gsap.from(".slide-up", {
-			duration: 2,
+			duration: 2.5,
 			y: 100,
 			opacity: 0, 
 			stagger: 0.2,
-			ease: "power3.out",
+			ease: "expo.out",
 		});
 	});
 

@@ -1,8 +1,8 @@
 ---
 import { NavbarRoutes } from "@lib/routes/navbar-routes"
 ---
-<nav class="fixed w-full h-20 p-8 flex justify-between ">
+<nav class="fixed w-full h-20 p-8 flex justify-between z-10">
     {NavbarRoutes.map(routes=>(
-        <p class="text-base  ">{routes.name}</p>
+        <p class="text-base  hover:text-accent w-fit h-fit transition-all duration-300">{routes.name}</p>
     ))}
 </nav>
