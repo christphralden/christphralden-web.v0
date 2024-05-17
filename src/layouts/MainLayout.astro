@@ -21,7 +21,11 @@ const { title } = Astro.props;
 	</head>
 	<body>
 		<Navbar/>
-		<slot />
+		<div class="smooth-wrapper">
+			<div class="smooth-content">
+				<slot/>
+			</div>
+		</div>
 		<Footer/>
 		<CustomCursor/>
 	</body>
@@ -47,3 +51,25 @@ const { title } = Astro.props;
 		font-family: sans-serif;
 	}
 </style>
+<script>
+	import LocomotiveScroll from 'locomotive-scroll';
+
+
+	const options = {
+			wrapper: window,
+			content: document.documentElement,
+			lerp: 0.1,
+			duration: 1.2,
+			orientation: 'vertical',
+			gestureOrientation: 'vertical',
+			smoothWheel: true,
+			smoothTouch: false,
+			wheelMultiplier: 1,
+			touchMultiplier: 2,
+			normalizeWheel: true,
+	}
+	const locomotiveScroll = new LocomotiveScroll(options);
+
+
+
+</script>
