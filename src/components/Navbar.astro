@@ -4,7 +4,7 @@ import TransitionLink from '@components/link/TransitionLink';
 const currentPath = Astro.url.pathname;
 ---
 
-<nav class="fixed w-full h-20 p-8 flex justify-between z-10">
+<nav class=" w-full h-20 p-8 flex justify-between z-10">
 	{
 		NavbarRoutes.map((routes,i) => (
 			<TransitionLink
@@ -27,7 +27,7 @@ const currentPath = Astro.url.pathname;
 
     document.addEventListener('DOMContentLoaded', function() {
 		gsap.from(".navbar", {
-			duration: 1,
+			duration: 0.5,
 			y: 25,
 			stagger: 0.1,
 			ease: "expo.out",
