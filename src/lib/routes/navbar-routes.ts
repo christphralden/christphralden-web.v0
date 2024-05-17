@@ -13,7 +13,7 @@ const NavbarRoutes = [
     },
     {
         name:"More",
-        route:"/"
+        route:"/more"
     }
 ]
 

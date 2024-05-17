@@ -6,6 +6,7 @@ export default {
 			fontFamily: {
 				'suisse': ['Suisse', 'sans-serif'],
 				'suisse-works': ['Suisse-Works', 'serif'],
+				'jha': ['Jha', 'serif'],
 			},
 			colors: {
 				'primary': '#4169E1',

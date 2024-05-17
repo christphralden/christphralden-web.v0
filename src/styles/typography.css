@@ -94,3 +94,10 @@
     font-weight: 700; 
     font-style: normal; 
 }
+
+@font-face {
+    font-family: 'Jha';
+    src: url('../../public/fonts/Jha/jha-times-now.ttf') format('truetype');
+    font-weight: 400; 
+    font-style: normal; 
+}
