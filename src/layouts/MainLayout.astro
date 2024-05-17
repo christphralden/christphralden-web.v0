@@ -24,7 +24,8 @@ const { title } = Astro.props;
 		<slot />
 		<Footer/>
 		<CustomCursor/>
-		<div id="transition-element" class="w-screen h-screen bg-accent z-20 fixed top-0 left-0"/>
+		<div id="transition-element" class="w-screen h-screen bg-accent z-20 fixed top-0 left-0 flex justify-center items-center">
+		</div>
 	</body>
 </html>
 <style is:global>
@@ -50,7 +51,7 @@ const { title } = Astro.props;
 </style>
 <script>
 	import { animatePageIn } from '@lib/animations/transition-link';
-import LocomotiveScroll from 'locomotive-scroll';
+	import LocomotiveScroll from 'locomotive-scroll';
 	const options = {
 			wrapper: window,
 			content: document.documentElement,

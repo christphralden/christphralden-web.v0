@@ -1,10 +1,36 @@
 ---
-import { NavbarRoutes } from "@lib/routes/navbar-routes"
-import TransitionLink from "@components/link/TransitionLink";
+import {NavbarRoutes} from '@lib/routes/navbar-routes';
+import TransitionLink from '@components/link/TransitionLink';
 const currentPath = Astro.url.pathname;
 ---
+
 <nav class="fixed w-full h-20 p-8 flex justify-between z-10">
-    {NavbarRoutes.map(routes=>(
-        <TransitionLink client:idle disabled={currentPath==routes.route} to={routes.route} className={`text-base ${currentPath === routes.route ? "text-accent" : "text-black"}  hover:text-accent w-fit h-fit transition-all duration-300`}>{routes.name}</TransitionLink>
-    ))}
+	{
+		NavbarRoutes.map((routes,i) => (
+			<TransitionLink
+				client:idle
+				disabled={currentPath == routes.route}
+				to={routes.route}
+				className={`text-base ${currentPath === routes.route ? 'text-accent' : 'text-black'}  hover:text-accent w-fit h-fit transition-all duration-300 "`}
+			>
+                <div class="navbar uppercase flex items-baseline tracking-wider">
+                    <p>{routes.name}</p>
+                    <p class="">—0{i+1}</p>
+                </div>
+			</TransitionLink>
+		))
+	}
 </nav>
+
+<script>
+    import {gsap} from 'gsap'
+
+    document.addEventListener('DOMContentLoaded', function() {
+		gsap.from(".navbar", {
+			duration: 1,
+			y: 25,
+			stagger: 0.1,
+			ease: "expo.out",
+		});
+	});
+</script>
