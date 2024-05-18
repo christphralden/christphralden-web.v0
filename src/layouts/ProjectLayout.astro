@@ -17,12 +17,12 @@ const {} = Astro.props;
 				</span>
 			</div>
 			<div class="w-1/2 text-xl flex flex-col gap-16">
-				<p class="w-[60%]">{lorem.small}</p>
+				<p class="w-[60%] font-light">{lorem.small}</p>
 
 				<div class="flex flex-col items-start">
 					<TransitionLink
 						client:idle
-						className={`${currentPath === '/projects/professional' ? 'text-black' : 'text-zinc-400'} hover:text-black transition-all duration-300 uppercase  tracking-wider`}
+						className={`${currentPath === '/projects/professional' ? 'text-black underline' : 'text-zinc-400'}  uppercase  tracking-wider hover:underline`}
 						to="/projects/professional"
 						disabled={currentPath === '/projects/professional'}
 						id="professional"
@@ -33,7 +33,7 @@ const {} = Astro.props;
 					<TransitionLink
 						client:idle
 						to="/projects/personal"
-						className={`${currentPath === '/projects/personal' ? 'text-black' : 'text-zinc-400'} hover:text-black transition-all duration-300 uppercase tracking-wider`}
+						className={`${currentPath === '/projects/personal' ? 'text-black underline' : 'text-zinc-400'} uppercase tracking-wider hover:underline`}
 						disabled={currentPath === '/projects/personal'}
 						id="personal"
                     >

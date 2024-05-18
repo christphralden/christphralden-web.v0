@@ -15,7 +15,7 @@ const currentPath = Astro.url.pathname;
 				to={routes.route[0]}
 				className={`text-base ${isActive ? 'text-accent' : 'text-black'}  hover:text-accent w-fit h-fit transition-all duration-300 "`}
 			>
-                <div class="navbar uppercase flex items-baseline tracking-wider text-xl">
+                <div class={`navbar uppercase flex items-baseline tracking-wider text-xl `}>
                     <p>{routes.name}</p>
                     <p class="">—0{i+1}</p>
                 </div>
@@ -29,7 +29,7 @@ const currentPath = Astro.url.pathname;
 
     document.addEventListener('DOMContentLoaded', function() {
 		gsap.from(".navbar", {
-			duration: 0.5,
+			duration: 1,
 			y: 25,
 			stagger: 0.1,
 			ease: "expo.out",
