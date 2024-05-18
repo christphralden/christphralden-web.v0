@@ -36,6 +36,7 @@ export const animatePageOut = (to:string) => {
         })
         .to(animationWrapper, {
             yPercent: 0,
+
             duration: 0.4,
             ease:'power2.inOut',
             onComplete: () => {

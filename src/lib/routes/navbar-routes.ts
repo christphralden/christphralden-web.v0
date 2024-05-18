@@ -1,19 +1,19 @@
 const NavbarRoutes = [
     {
         name:"Home",
-        route:"/"
+        route:["/"]
     },
     {
         name:"Projects",
-        route:"/projects"
+        route:["/projects/professional", "/projects/personal"]
     },
     {
         name:"Resume",
-        route:"/resume"
+        route:["/resume"]
     },
     {
         name:"More",
-        route:"/more"
+        route:["/more"]
     }
 ]
 

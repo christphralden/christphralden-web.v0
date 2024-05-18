@@ -1,0 +1,50 @@
+---
+import Separator from '@components/ui/Separator.astro';
+import lorem from '@content/lorem.json';
+import TransitionLink from '@components/link/TransitionLink';
+const currentPath = Astro.url.pathname;
+type Props = {};
+
+const {} = Astro.props;
+---
+
+<div class="w-full h-fit p-8 py-16">
+	<div class="flex flex-col gap-8">
+		<div class="w-full flex justify-center items-start">
+			<div class="w-1/2">
+				<span class="uppercase text-7xl tracking-tight flex items-start gap-2">
+					Projects <span class="text-xl tracking-normal">(012)</span>
+				</span>
+			</div>
+			<div class="w-1/2 text-xl flex flex-col gap-16">
+				<p class="w-[60%]">{lorem.small}</p>
+
+				<div class="flex flex-col items-start">
+					<TransitionLink
+						client:idle
+						className={`${currentPath === '/projects/professional' ? 'text-black' : 'text-zinc-400'} hover:text-black transition-all duration-300 uppercase  tracking-wider`}
+						to="/projects/professional"
+						disabled={currentPath === '/projects/professional'}
+						id="professional"
+                    >
+                        Professional—05
+                    </TransitionLink>
+
+					<TransitionLink
+						client:idle
+						to="/projects/personal"
+						className={`${currentPath === '/projects/personal' ? 'text-black' : 'text-zinc-400'} hover:text-black transition-all duration-300 uppercase tracking-wider`}
+						disabled={currentPath === '/projects/personal'}
+						id="personal"
+                    >
+                        Personal—07
+                    </TransitionLink>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="w-full h-full px-8">
+    <slot />
+</div>
+<script></script>

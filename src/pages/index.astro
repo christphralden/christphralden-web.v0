@@ -7,13 +7,16 @@ import lorem from '@content/lorem.json'
 	<mai class="min-h-screen">
 		<div class="w-screen h-screen flex p-8">
 			<div class="w-full h-full relative ">
-				<div class="mt-24 relative font-suisse flex flex-col gap-8">
+				<!-- <div class="absolute w-full h-full flex justify-center items-center ">
+					<div class="w-1/2 h-1/2 z-0 bg-accent -mr-[500px]"/>
+				</div> -->
+				<div class="mt-24 relative font-suisse flex flex-col gap-8  ">
 					<p class="slide-up text-9xl font-light text-black tracking-tighter uppercase">Christopher&nbsp;&nbsp;Alden</p>
-					<div class="slide-up flex gap-4 w-96 ml-[350px] leading-5">
-						<div class="text-right tracking-wider h-fit">
-							<p class="text-nowrap">ABOUT ME</p>
+					<div class="slide-up flex gap-4 w-[450px] ml-[350px] leading-6 text-xl">
+						<div class="text-right tracking-wider h-fit ">
+							<p class="text-nowrap uppercase">About Me</p>
 						</div>
-						<div class="text-left flex flex-col gap-2">
+						<div class="text-left flex flex-col gap-2 text-zinc-500 ">
 							<p class="">{lorem.small}</p>
 							<p class="">{lorem.small}</p>
 						</div>
@@ -29,6 +32,8 @@ import lorem from '@content/lorem.json'
 		</div>
 	</mai>
 </MainLayout>
+
+
 
 <script>
 	import { gsap } from 'gsap';
